@@ -14,6 +14,8 @@
 		D8D8301A1D241684005AEE33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8D830181D241684005AEE33 /* LaunchScreen.storyboard */; };
 		D8D830251D241685005AEE33 /* ok_fineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D830241D241685005AEE33 /* ok_fineTests.swift */; };
 		D8D830301D241685005AEE33 /* ok_fineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D8302F1D241685005AEE33 /* ok_fineUITests.swift */; };
+		D8D8303E1D2417A2005AEE33 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = D8D8303D1D2417A2005AEE33 /* data.json */; };
+		D8D8303F1D2417A2005AEE33 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = D8D8303D1D2417A2005AEE33 /* data.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,7 @@
 		D8D8302B1D241685005AEE33 /* ok fineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ok fineUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8D8302F1D241685005AEE33 /* ok_fineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ok_fineUITests.swift; sourceTree = "<group>"; };
 		D8D830311D241685005AEE33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8D8303D1D2417A2005AEE33 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +106,7 @@
 				D8D830161D241684005AEE33 /* Assets.xcassets */,
 				D8D830181D241684005AEE33 /* LaunchScreen.storyboard */,
 				D8D8301B1D241684005AEE33 /* Info.plist */,
+				D8D8303D1D2417A2005AEE33 /* data.json */,
 			);
 			path = "ok fine";
 			sourceTree = "<group>";
@@ -193,6 +197,7 @@
 				TargetAttributes = {
 					D8D8300B1D241684005AEE33 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = M7CQNY6ET6;
 					};
 					D8D8301F1D241685005AEE33 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -232,6 +237,7 @@
 				D8D8301A1D241684005AEE33 /* LaunchScreen.storyboard in Resources */,
 				D8D830171D241684005AEE33 /* Assets.xcassets in Resources */,
 				D8D830151D241684005AEE33 /* Main.storyboard in Resources */,
+				D8D8303E1D2417A2005AEE33 /* data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +245,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8D8303F1D2417A2005AEE33 /* data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,10 +406,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "ok fine/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "feiglin.ok-fine";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -410,10 +420,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "ok fine/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "feiglin.ok-fine";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
