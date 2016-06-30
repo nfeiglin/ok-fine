@@ -7,17 +7,20 @@
 //
 
 import XCTest
+import Foundation
 
 @testable import ok_fine
 
 class Ok_fineTests: XCTestCase {
-    var dataDict : Dictionary<String, AnyObject>?
+    var dataDict : NSDictionary = [:]
+
     
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        dataDict = JsonReader.readJson("data.json")
+        dataDict = JsonReader.readJson("data")
         debugPrint(dataDict)
+        print("IN SETUP METHOD")
     }
     
     override func tearDown() {

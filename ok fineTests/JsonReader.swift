@@ -24,10 +24,8 @@ class JsonReader {
         
         let dict =  try? NSJSONSerialization.JSONObjectWithData(jsonData, options: .AllowFragments)
 
-        print(dict as! NSDictionary);
-        let dicDic = dict as! NSDictionary
-        
-        print(dicDic["options"]!["nsw"])
+        //print(dict as! NSDictionary);
+
         
         return dict as! NSDictionary
     }
