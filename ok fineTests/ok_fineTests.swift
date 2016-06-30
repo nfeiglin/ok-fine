@@ -16,8 +16,8 @@ class Ok_fineTests: XCTestCase {
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        //dataDict = JsonReader.readJson("data.json")
-        print(dataDict)
+        dataDict = JsonReader.readJson("data.json")
+        debugPrint(dataDict)
     }
     
     override func tearDown() {
@@ -26,7 +26,7 @@ class Ok_fineTests: XCTestCase {
     }
     
     func testTestActuallyIsCalled() {
-        print("==== YOYOYOYOYOY ==== ")
+        debugPrint("==== YOYOYOYOYOY ==== ")
         XCTAssertEqual(30, 30, "30 equals 30")
     }
     
