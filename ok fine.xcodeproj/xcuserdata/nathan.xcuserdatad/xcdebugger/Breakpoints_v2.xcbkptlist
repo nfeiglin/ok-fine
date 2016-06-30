@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ok fineTests/JsonReader.swift"
+            timestampString = "488980877.199341"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "readJson(_:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static ok_fine.JsonReader.readJson (Swift.String) -&gt; __ObjC.NSDictionary"
+                  moduleName = "ok fine"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nathan/Google%20Drive/Projects/ok-fine/ok%20fine/ok%20fineTests/JsonReader.swift"
+                  timestampString = "488981993.240336"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "1116">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static ok_fineTests.JsonReader.readJson (Swift.String) -&gt; __ObjC.NSDictionary"
+                  moduleName = "ok fineTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nathan/Google%20Drive/Projects/ok-fine/ok%20fine/ok%20fineTests/JsonReader.swift"
+                  timestampString = "488981993.935065"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "1116">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ok fineTests/ok_fineTests.swift"
+            timestampString = "488984547.616435"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "testRenderingTwoVariablesNextToEachOther()"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ok_fineTests.Ok_fineTests.testRenderingTwoVariablesNextToEachOther () -&gt; ()"
+                  moduleName = "ok fineTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nathan/Google%20Drive/Projects/ok-fine/ok%20fine/ok%20fineTests/ok_fineTests.swift"
+                  timestampString = "488984374.936691"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "90"
+                  endingLineNumber = "90"
+                  offsetFromSymbolStart = "1196">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ok_fineTests.Ok_fineTests.(testRenderingTwoVariablesNextToEachOther () -&gt; ()).(implicit closure #2)"
+                  moduleName = "ok fineTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nathan/Google%20Drive/Projects/ok-fine/ok%20fine/ok%20fineTests/ok_fineTests.swift"
+                  timestampString = "488984374.937107"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "90"
+                  endingLineNumber = "90"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

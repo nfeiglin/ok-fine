@@ -10,18 +10,15 @@ import Foundation
 
 class JsonReader {
     class func readJson(fileName: String) -> NSDictionary {
-        print("== Got to first line of readJson")
+        
+        //print("== Got to first line of readJson")
         
         let path = NSBundle.mainBundle().pathForResource(fileName, ofType: "json")
-        debugPrint(path)
+        //debugPrint(path)
         
         let url = NSURL.fileURLWithPath(path!, isDirectory: false)
-        
-        
         let jsonData = NSData.init(contentsOfURL: url)!
-        
-        debugPrint(jsonData)
-        
+        //debugPrint(jsonData)
         let dict =  try? NSJSONSerialization.JSONObjectWithData(jsonData, options: .AllowFragments)
 
         //print(dict as! NSDictionary);

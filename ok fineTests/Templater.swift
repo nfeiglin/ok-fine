@@ -31,4 +31,9 @@ class Templater {
         
         return template
     }
+    
+    func setTemplateText(templateText: String) -> Templater {
+        self.templateText = templateText
+        return self
+    }
 }

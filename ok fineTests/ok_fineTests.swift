@@ -33,16 +33,64 @@ class Ok_fineTests: XCTestCase {
         XCTAssertEqual(30, 30, "30 equals 30")
     }
     
-    func testTemplaterOne() {
-        let templateText : String  = dataDict!["templates"]!["nsw.bay.signs.contradictory"]
+    func testTemplateRenderingWithOneVariable() {
+
+        let templatesDict = dataDict["templates"] as! Dictionary<String, String>
+
+        let templateText = templatesDict["nsw.test.one"]!
         let templater = Templater(templateText: templateText, renderDelimiterStart: "{{ ", renderDelimiterEnd: " }}")
+        
+        let renderVariables : Dictionary <String, String> = [
+            "name": "Nathan Feiglin"
+        ]
+        
+        let renderedText = templater.render(renderVariables)
+        
+        XCTAssertEqual(renderedText, "My name is Nathan Feiglin.");
 
     }
     
+    
+    func testTemplateRenderingWithTwoVariables() {
+        let templatesDict = dataDict["templates"] as! Dictionary<String, String>
+        
+        let templateText = templatesDict["nsw.test.two"]!
+        let templater = Templater(templateText: templateText, renderDelimiterStart: "{{ ", renderDelimiterEnd: " }}")
+        
+        let renderVariables : Dictionary <String, String> = [
+            "name": "Nathan Feiglin",
+            "infring.date": "30 June 2016"
+        ]
+        
+        let renderedText = templater.render(renderVariables)
+        
+        XCTAssertEqual(renderedText, "My name is Nathan Feiglin. This was tested on 30 June 2016...");
+        
+    }
+    
+    func testRenderingTwoVariablesNextToEachOther() {
+        let templatesDict = dataDict["templates"] as! Dictionary<String, String>
+        
+        let templateText = templatesDict["nsw.test.vars-next-to-each-other"]!
+        let templater = Templater(templateText: templateText, renderDelimiterStart: "{{ ", renderDelimiterEnd: " }}")
+        
+        let renderVariables : Dictionary <String, String> = [
+            "name": "Nathan Feiglin",
+            "title": "Mr"
+        ]
+        
+        let renderedText = templater.render(renderVariables)
+        
+        XCTAssertEqual(renderedText, "My name is MrNathan Feiglin");
+    }
+
+    
+    /*
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
+ */
     
     /*
     func testPerformanceExample() {

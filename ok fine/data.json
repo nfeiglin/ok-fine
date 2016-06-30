@@ -84,6 +84,12 @@
     "templates": {
         "nsw.bay.signs.contradictory": "RE: Infringment notice {{ infring.num }} appeal \n I received a penalty notice regarding {{ infring.desc }} at {{ infring.location }} on {{ infring.date }}. \n \n I am appealing on the grounds of contradictory signage causing the supposed offence. \n 1) The first sign implied: {{ sign.1.implication }}, while \n 2) A second sign implied: {{ sign.2.implication }}. \n The signs were located {{ sign.comparative.location }} from each other, making it very confusing, and borderline unconscionable for this penalty to be upheld. \n Thanks for your consideration. \n {{ name }}",
         
-        "nsw.bay.signs.contradictory": "Template to come... My name is {{ name }}"
+        "nsw.bay.signs.contradictory": "Template to come...",
+        
+        "nsw.test.one": "My name is {{ name }}.",
+        
+        "nsw.test.two": "My name is {{ name }}. This was tested on {{ infring.date }}...",
+        
+        "nsw.test.vars-next-to-each-other": "My name is {{ title }}{{ name }}" 
     }
 }
