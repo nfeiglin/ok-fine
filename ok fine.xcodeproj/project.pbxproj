@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D88CA21F1D252EBF006333F8 /* Templater.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88CA21E1D252EBF006333F8 /* Templater.swift */; };
+		D88CA2201D252EBF006333F8 /* Templater.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88CA21E1D252EBF006333F8 /* Templater.swift */; };
 		D8D830101D241684005AEE33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D8300F1D241684005AEE33 /* AppDelegate.swift */; };
 		D8D830121D241684005AEE33 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D830111D241684005AEE33 /* ViewController.swift */; };
 		D8D830151D241684005AEE33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8D830131D241684005AEE33 /* Main.storyboard */; };
 		D8D830171D241684005AEE33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8D830161D241684005AEE33 /* Assets.xcassets */; };
 		D8D8301A1D241684005AEE33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8D830181D241684005AEE33 /* LaunchScreen.storyboard */; };
 		D8D830251D241685005AEE33 /* ok_fineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D830241D241685005AEE33 /* ok_fineTests.swift */; };
-		D8D830301D241685005AEE33 /* ok_fineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D8302F1D241685005AEE33 /* ok_fineUITests.swift */; };
 		D8D8303E1D2417A2005AEE33 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = D8D8303D1D2417A2005AEE33 /* data.json */; };
 		D8D8303F1D2417A2005AEE33 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = D8D8303D1D2417A2005AEE33 /* data.json */; };
 		D8D830411D2424D4005AEE33 /* JsonReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D830401D2424D4005AEE33 /* JsonReader.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D88CA21E1D252EBF006333F8 /* Templater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Templater.swift; sourceTree = "<group>"; };
 		D8D8300C1D241684005AEE33 /* ok fine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ok fine.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8D8300F1D241684005AEE33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8D830111D241684005AEE33 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,8 +51,6 @@
 		D8D830241D241685005AEE33 /* ok_fineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ok_fineTests.swift; sourceTree = "<group>"; };
 		D8D830261D241685005AEE33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D8D8302B1D241685005AEE33 /* ok fineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ok fineUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D8D8302F1D241685005AEE33 /* ok_fineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ok_fineUITests.swift; sourceTree = "<group>"; };
-		D8D830311D241685005AEE33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D8D8303D1D2417A2005AEE33 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		D8D830401D2424D4005AEE33 /* JsonReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonReader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,7 +85,6 @@
 			children = (
 				D8D8300E1D241684005AEE33 /* ok fine */,
 				D8D830231D241685005AEE33 /* ok fineTests */,
-				D8D8302E1D241685005AEE33 /* ok fineUITests */,
 				D8D8300D1D241684005AEE33 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -119,18 +118,10 @@
 			children = (
 				D8D830241D241685005AEE33 /* ok_fineTests.swift */,
 				D8D830401D2424D4005AEE33 /* JsonReader.swift */,
+				D88CA21E1D252EBF006333F8 /* Templater.swift */,
 				D8D830261D241685005AEE33 /* Info.plist */,
 			);
 			path = "ok fineTests";
-			sourceTree = "<group>";
-		};
-		D8D8302E1D241685005AEE33 /* ok fineUITests */ = {
-			isa = PBXGroup;
-			children = (
-				D8D8302F1D241685005AEE33 /* ok_fineUITests.swift */,
-				D8D830311D241685005AEE33 /* Info.plist */,
-			);
-			path = "ok fineUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,6 +258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D88CA21F1D252EBF006333F8 /* Templater.swift in Sources */,
 				D8D830121D241684005AEE33 /* ViewController.swift in Sources */,
 				D8D830411D2424D4005AEE33 /* JsonReader.swift in Sources */,
 				D8D830101D241684005AEE33 /* AppDelegate.swift in Sources */,
@@ -279,6 +271,7 @@
 			files = (
 				D8D830421D2424D4005AEE33 /* JsonReader.swift in Sources */,
 				D8D830251D241685005AEE33 /* ok_fineTests.swift in Sources */,
+				D88CA2201D252EBF006333F8 /* Templater.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,7 +279,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8D830301D241685005AEE33 /* ok_fineUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,6 +493,7 @@
 				D8D830361D241685005AEE33 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D8D830371D241685005AEE33 /* Build configuration list for PBXNativeTarget "ok fineTests" */ = {
 			isa = XCConfigurationList;
@@ -509,6 +502,7 @@
 				D8D830391D241685005AEE33 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D8D8303A1D241685005AEE33 /* Build configuration list for PBXNativeTarget "ok fineUITests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +511,7 @@
 				D8D8303C1D241685005AEE33 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -30,6 +30,12 @@ class Ok_fineTests: XCTestCase {
         XCTAssertEqual(30, 30, "30 equals 30")
     }
     
+    func testTemplaterOne() {
+        let templateText : String  = dataDict!["templates"]!["nsw.bay.signs.contradictory"]
+        let templater = Templater(templateText: templateText, renderDelimiterStart: "{{ ", renderDelimiterEnd: " }}")
+
+    }
+    
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
