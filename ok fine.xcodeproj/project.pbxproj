@@ -40,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		D88CA21E1D252EBF006333F8 /* Templater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Templater.swift; sourceTree = "<group>"; };
+		D8D39F861D25560C006EABC6 /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = SOURCE_ROOT; };
 		D8D8300C1D241684005AEE33 /* ok fine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ok fine.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8D8300F1D241684005AEE33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8D830111D241684005AEE33 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				D8D830241D241685005AEE33 /* ok_fineTests.swift */,
+				D8D39F861D25560C006EABC6 /* readme.md */,
 				D8D830401D2424D4005AEE33 /* JsonReader.swift */,
 				D88CA21E1D252EBF006333F8 /* Templater.swift */,
 				D8D830261D241685005AEE33 /* Info.plist */,
