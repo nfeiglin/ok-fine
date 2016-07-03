@@ -99,63 +99,82 @@
     "menu": [
 
         {
-            "title": "Car registration permit date inccorect",
-            "subtitle": null,
-            "has_children": false,
-            "meta": {
-                "option_uid": "nsw.permit.date.inccorect"
-            }
-        },
-
-        {
-            "title": "There was an issue with the signs",
-            "subtitle": "This could be due to a number of reasons",
+            "title": "Jurisdiction",
+            "subtitle": "Where did you get the ticket?",
             "has_children": true,
+            "meta": {
+                "top_level_menu": true
+            },
+
             "children": [{
-                    "title": "The signs were contradictory",
-                    "subtitle": null,
-                    "has_children": false,
-                    "meta": {
-                        "option_uid": "nsw.bay.signs.contradictory"
-                    }
+                "title": "New South Wales",
+                "subtitle": "Seeking review with the Office of State Revenue (SDRO)",
+                "has_children": true,
+                "meta": {
+                    "option_uid": "nsw"
                 },
 
-                {
-                    "title": "The signs were unclear",
-                    "subtitle": "The signs may have been unclear or ambiguous",
-                    "has_children": false,
-                    "meta": {
-                        "option_uid": "nsw.bay.signs.unclear"
+                "children": [{
+                        "title": "Car registration permit date inccorect",
+                        "subtitle": null,
+                        "has_children": false,
+                        "meta": {
+                            "option_uid": "nsw.permit.date.inccorect"
+                        }
+                    },
+
+                    {
+                        "title": "There was an issue with the signs",
+                        "subtitle": "This could be due to a number of reasons",
+                        "has_children": true,
+                        "children": [{
+                                "title": "The signs were contradictory",
+                                "subtitle": null,
+                                "has_children": false,
+                                "meta": {
+                                    "option_uid": "nsw.bay.signs.contradictory"
+                                }
+                            },
+
+                            {
+                                "title": "The signs were unclear",
+                                "subtitle": "The signs may have been unclear or ambiguous",
+                                "has_children": false,
+                                "meta": {
+                                    "option_uid": "nsw.bay.signs.unclear"
+                                }
+                            }
+                        ]
+                    },
+
+                    {
+                        "title": "The offence happened after I sold the car",
+                        "subtitle": "It wasn't me!",
+                        "has_children": false,
+                        "meta": {
+                            "option_uid": "nsw.car.after.sold"
+                        }
+                    },
+
+                    {
+                        "title": "The offence happened after I sold the car",
+                        "subtitle": "It wasn't me!",
+                        "has_children": false,
+                        "meta": {
+                            "option_uid": "nsw.car.before.bought"
+                        }
+                    },
+
+                    {
+                        "title": "More TK",
+                        "subtitle": "More to come once this is tested. ie necessity, parking bay too small, and others.",
+                        "has_children": false,
+                        "meta": {
+                            "option_uid": "nsw.test.one"
+                        }
                     }
-                }
-            ]
-        },
-
-        {
-            "title": "The offence happened after I sold the car",
-            "subtitle": "It wasn't me!",
-            "has_children": false,
-            "meta": {
-                "option_uid": "nsw.car.after.sold"
-            }
-        },
-
-        {
-            "title": "The offence happened after I sold the car",
-            "subtitle": "It wasn't me!",
-            "has_children": false,
-            "meta": {
-                "option_uid": "nsw.car.before.bought"
-            }
-        },
-
-        {
-            "title": "More TK",
-            "subtitle": "More to come once this is tested. ie necessity, parking bay too small, and others.",
-            "has_children": false,
-            "meta": {
-                "option_uid": "nsw.test.one"
-            }
+                ]
+            }]
         }
     ]
 }

@@ -1,0 +1,103 @@
+{
+    "options": {
+        "nsw": [
+                "nsw.permit.date.inccorect",
+                "nsw.car.stolen",
+                "nsw.car.after.sold",
+                "nsw.car.before.bought",
+                "nsw.bay.signs.contradictory",
+                "nsw.bay.signs.unclear",
+                "nsw.bay.too.small",
+                "nsw.nessecity.hosipital"
+        ]
+        
+    },
+    
+    "required-input": {
+        "nsw.car.stolen": ["name", "infring.num", "infring.date", "infring.desc", "theft.date", "report.station.name", "report.refnum", "report.date"],
+        "nsw.bay.signs.contradictory": ["name", "infring.num", "infring.date", "infring.desc", "infring.location", "sign.1.implication", "sign.2.implication", "sign.comparative.location"]
+    },
+    
+    "input-attributes": {
+        "name": {
+            "type": "text",
+            "help-text": "Name (as to appear on the letter"
+        },
+        
+        "infring.num": {
+            "type": "number",
+            "help-text": "The unique number of your infringment notice"
+        },
+        
+        "infring.date": {
+            "type": "date",
+            "help-text": "The date of the offence"
+        },
+        
+        "infring.location": {
+            "type": "text",
+            "help-text": "The location (street name) of the offence"
+        },
+        
+        "infring.desc": {
+            "type": "text",
+            "help-text": "A short description of the offence i.e 'parking in no stopping'"
+        },
+        
+        "theft.date": {
+            "type": "date",
+            "help-text": "The date of the theft of the car"
+        },
+        
+        "report.station.name": {
+            "type": "text",
+            "help-text": "The name of the police station you reported the theft of the car to"
+        },
+        
+        "report.refnum": {
+            "type": "number",
+            "help-text": "The reference number on your theft report, given to you by the police"
+        },
+        
+        "report.date": {
+            "type": "date",
+            "help-text": "The date you reported the theft to police"
+        },
+        
+        "sign.1.implication": {
+            "type": "text",
+            "help-text": "The implication of the first sign i.e 'Unrestricted parking between 9am and 3pm'"
+        },
+        
+        "sign.2.implication": {
+            "type": "text",
+            "help-text": "The implication of the second sign i.e '15m parking between 10am and 2pm"
+        },
+        
+        "sign.comparative.location": {
+            "type": "select",
+            "select-options": ["1 meter away", "3 meters away", "10 meters away", "right next to"],
+            "help-text": "The distance between the contradictory signs"
+        }
+    },
+    
+    "templates": {
+        "nsw.bay.signs.contradictory": "RE: Infringment notice {{ infring.num }} appeal \n I received a penalty notice regarding {{ infring.desc }} at {{ infring.location }} on {{ infring.date }}. \n \n I am appealing on the grounds of contradictory signage causing the supposed offence. \n 1) The first sign implied: {{ sign.1.implication }}, while \n 2) A second sign implied: {{ sign.2.implication }}. \n The signs were located {{ sign.comparative.location }} from each other, making it very confusing, and borderline unconscionable for this penalty to be upheld. \n Thanks for your consideration. \n {{ name }}",
+        
+        "nsw.bay.signs.contradictory": "Template to come...",
+        
+        "nsw.test.one": "My name is {{ name }}.",
+        
+        "nsw.test.two": "My name is {{ name }}. This was tested on {{ infring.date }}...",
+        
+        "nsw.test.vars-next-to-each-other": "My name is {{ title }}{{ name }}" 
+    },
+    
+    "menu": [
+        {
+            "title": "Car registration permit date inccorect",
+             "subtitle": null,
+             "has_children": false
+        }
+    ]
+}
