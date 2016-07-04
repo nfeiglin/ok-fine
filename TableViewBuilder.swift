@@ -28,10 +28,11 @@ class TableViewBuilder: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-		selectionCallback = { (tableView: UITableView, indexPath: NSIndexPath, selectedObject: Dictionary<String, AnyObject>, doesHaveChildrenTop: Bool) in
+		selectionCallback = { (tableView: UITableView, indexPath: NSIndexPath, selectedObject: Dictionary<String, AnyObject>, doesHaveChildren: Bool) in
 			if let data = selectedObject["children"] as? StandardCollectionType {
 				let detailMenuViewController:TableViewBuilder = TableViewBuilder()
 				detailMenuViewController.tableViewData = data
+                detailMenuViewController.title = selectedObject["title"] as! String
 				self.navigationController?.pushViewController(detailMenuViewController, animated: true)
 			}
 		}

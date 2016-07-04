@@ -40,7 +40,7 @@ class MenuViewController: UIViewController {
             //navController.pushViewController(menuTableViewController, animated: false)
         }
         
-        self.selectedTapCallback = { (tableView, indexPath, selectedObject, doesHaveChildrenTop) in
+        self.selectedTapCallback = { (tableView, indexPath, selectedObject, doesHaveChildren) in
             
             let detailMenuViewController:TableViewBuilder = TableViewBuilder()
             detailMenuViewController.tableViewData = selectedObject["children"] as! StandardCollectionType
