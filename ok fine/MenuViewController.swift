@@ -28,7 +28,7 @@ class MenuViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
-        
+		
         let menuTableViewController:TableViewBuilder = TableViewBuilder()
         menuTableViewController.tableViewData = self.passedData as Array<Dictionary<String, AnyObject>>?
         
@@ -46,9 +46,9 @@ class MenuViewController: UIViewController {
             detailMenuViewController.tableViewData = selectedObject["children"] as! StandardCollectionType
             self.navController!.pushViewController(detailMenuViewController, animated: true)
         }
-        
-        
-        
+		
+		print("SETTING SELECTION CALLBACK")
+		
         menuTableViewController.setSelectedCallback(self.selectedTapCallback!)
         
         
