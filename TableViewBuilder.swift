@@ -17,7 +17,7 @@ class TableViewBuilder: UITableViewController {
     var isTableViewDataNil = true
     
     var selectionCallback : ((tableView: UITableView, indexPath: NSIndexPath, selectedObject: Dictionary<String, AnyObject>, doesHaveChildren:Bool) -> Void)?
-    
+	
     var childrenObjects:StandardCollectionType?
     
     func setTableViewCellsData(data: Array<Dictionary<String, AnyObject>>) {
@@ -28,6 +28,14 @@ class TableViewBuilder: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+		selectionCallback = { (tableView: UITableView, indexPath: NSIndexPath, selectedObject: Dictionary<String, AnyObject>, doesHaveChildrenTop: Bool) in
+			if let data = selectedObject["children"] as? StandardCollectionType {
+				let detailMenuViewController:TableViewBuilder = TableViewBuilder()
+				detailMenuViewController.tableViewData = data
+				self.navigationController?.pushViewController(detailMenuViewController, animated: true)
+			}
+		}
+		
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -128,7 +136,7 @@ class TableViewBuilder: UITableViewController {
     
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
+		
         var selectedObject:Dictionary<String, AnyObject>
         
         if (self.hasChildren) {
@@ -136,7 +144,6 @@ class TableViewBuilder: UITableViewController {
         } else {
             selectedObject = self.tableViewData![indexPath.row]
         }
-
         
         self.selectionCallback!(tableView: tableView, indexPath: indexPath, selectedObject: selectedObject, doesHaveChildren: self.hasChildren)
     }
