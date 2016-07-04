@@ -7,9 +7,13 @@
 //
 
 import UIKit
+typealias StandardCollectionType = Array<Dictionary<String, AnyObject>>
 
 class MenuViewController: UIViewController {
     var passedData:Array<Dictionary<String, AnyObject>>?
+    var navController:UINavigationController?
+    
+    var selectedTapCallback:((tableView: UITableView, indexPath: NSIndexPath, selectedObject: Dictionary<String, AnyObject>, doesHaveChildren:Bool) -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,15 +32,24 @@ class MenuViewController: UIViewController {
         let menuTableViewController:TableViewBuilder = TableViewBuilder()
         menuTableViewController.tableViewData = self.passedData as Array<Dictionary<String, AnyObject>>?
         
-        let navController:UINavigationController = UINavigationController(rootViewController: menuTableViewController)
+        self.navController = UINavigationController(rootViewController: menuTableViewController)
         
         
-        self.presentViewController(navController, animated: false) {
+        self.presentViewController(self.navController!, animated: false) {
             print("Nav controller presented")
             //navController.pushViewController(menuTableViewController, animated: false)
         }
         
+        self.selectedTapCallback = { (tableView, indexPath, selectedObject, doesHaveChildrenTop) in
+            
+            let detailMenuViewController:TableViewBuilder = TableViewBuilder()
+            detailMenuViewController.tableViewData = selectedObject["children"] as! StandardCollectionType
+            self.navController!.pushViewController(detailMenuViewController, animated: true)
+        }
         
+        
+        
+        menuTableViewController.setSelectedCallback(self.selectedTapCallback!)
         
         
     }

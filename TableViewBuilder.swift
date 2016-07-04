@@ -8,13 +8,17 @@
 
 import UIKit
 
+
 class TableViewBuilder: UITableViewController {
 
     var tableViewData:Array<Dictionary<String, AnyObject>>?
     var hasChildren:Bool = false
     var firstObject:Dictionary<String, AnyObject>?
+    var isTableViewDataNil = true
     
-    var childrenObjects:Array<Dictionary<String, AnyObject>>?
+    var selectionCallback : ((tableView: UITableView, indexPath: NSIndexPath, selectedObject: Dictionary<String, AnyObject>, doesHaveChildren:Bool) -> Void)?
+    
+    var childrenObjects:StandardCollectionType?
     
     func setTableViewCellsData(data: Array<Dictionary<String, AnyObject>>) {
         self.tableViewData? = data
@@ -31,7 +35,21 @@ class TableViewBuilder: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
         self.tableView.registerClass(MenuTableViewCell.self, forCellReuseIdentifier: "menuCell")
-        self.firstObject = tableViewData![0] as Dictionary<String, AnyObject>!
+        
+        if let unwrappedTableViewData:Array<Dictionary<String, AnyObject>> = self.tableViewData {
+            self.isTableViewDataNil = false
+        }
+        
+        if (!self.isTableViewDataNil) {
+             self.firstObject = tableViewData![0] as Dictionary<String, AnyObject>!
+        }
+        
+        
+        if (tableViewData!.count >= 1) {
+           self.firstObject = tableViewData![0] as Dictionary<String, AnyObject>!
+        }
+        
+        //
         
         //let metaOfFirst:Dictionary<String, AnyObject> = self.firstObject!["meta"]! as! Dictionary<String, AnyObject>
         
@@ -59,15 +77,26 @@ class TableViewBuilder: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         
-        var theCount = tableViewData!.count
+        var theCount:Int = 1
         
-        if (self.hasChildren) {
-            print("HAS CHILDREN, SO RETURN COUNT OF CHILDREN")
-            theCount = self.firstObject!["children"]!.count!
-            print("The count is \(theCount)")
-            
+        if(!self.isTableViewDataNil) {
+            theCount = self.tableViewData!.count
         }
         
+        if ((!self.isTableViewDataNil && self.hasChildren)) {
+            print("HAS CHILDREN, SO RETURN COUNT OF CHILDREN")
+            //theCount = self.tableViewData![0]["children"]!.count!
+            theCount = self.childrenObjects!.count
+            print("The count is \(theCount)")
+        }
+        
+        else if let fObj = self.firstObject {
+            if ((fObj.indexForKey("children")) != nil) {
+                debugPrint(fObj)
+                theCount = self.firstObject!["children"]!.count!
+            }
+
+        }
         
         return theCount
     }
@@ -98,6 +127,27 @@ class TableViewBuilder: UITableViewController {
     }
     
 
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        var selectedObject:Dictionary<String, AnyObject>
+        
+        if (self.hasChildren) {
+           selectedObject  = self.childrenObjects![indexPath.row]
+        } else {
+            selectedObject = self.tableViewData![indexPath.row]
+        }
+
+        
+        self.selectionCallback!(tableView: tableView, indexPath: indexPath, selectedObject: selectedObject, doesHaveChildren: self.hasChildren)
+    }
+    
+    func setSelectedCallback(selectedCallback:(tableView: UITableView, indexPath: NSIndexPath, selectedObject: Dictionary<String, AnyObject>, doesHaveChildren:Bool) -> Void) {
+        
+        self.selectionCallback = selectedCallback
+        print("Selection callback set")
+    }
+    
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
