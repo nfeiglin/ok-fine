@@ -9,6 +9,7 @@
 import XCTest
 import Foundation
 
+
 @testable import ok_fine
 
 class Ok_fineTests: XCTestCase {
@@ -82,6 +83,21 @@ class Ok_fineTests: XCTestCase {
         let renderedText = templater.render(renderVariables)
         
         XCTAssertEqual(renderedText, "My name is MrNathan Feiglin");
+    }
+    
+    func testRulesTracker() {
+        let tracker = RulesTracker.Tracker.sharedTracker
+        
+        let dict:Dictionary<String, AnyObject> = Dictionary()
+        
+        let event1:RulesTrackerType = RulesTrackerType(eventName: "test.test.one", date: NSDate(timeIntervalSinceNow: 0), payload: Dictionary())
+        let event2:RulesTrackerType = RulesTrackerType(eventName: "test.test.two", date: NSDate(timeIntervalSinceNow: 400), payload: Dictionary())
+        
+        tracker.pushEvent(event1)
+        tracker.pushEvent(event2)
+        
+        XCTAssertEqual(tracker.getEvent(0).getEventName(), "test.test.one")
+        XCTAssertEqual(tracker.getEvent(1).getEventName(), "test.test.two")
     }
 
     
