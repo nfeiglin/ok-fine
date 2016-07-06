@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ok fineTests/ok_fineTests.swift"
-            timestampString = "488984547.616435"
+            timestampString = "489481617.201371"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
             landmarkName = "testRenderingTwoVariablesNextToEachOther()"
             landmarkType = "5">
             <Locations>
@@ -203,6 +203,38 @@
             endingLineNumber = "47"
             landmarkName = "viewDidAppear(_:)"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ok_fine.MenuViewController.(viewDidAppear (Swift.Bool) -&gt; ()).(closure #2)"
+                  moduleName = "ok fine"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nathan/Google%20Drive/Projects/ok-fine/ok%20fine/ok%20fine/MenuViewController.swift"
+                  timestampString = "489481741.128962"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "392">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ok_fineTests.MenuViewController.(viewDidAppear (Swift.Bool) -&gt; ()).(closure #2)"
+                  moduleName = "ok fineTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nathan/Google%20Drive/Projects/ok-fine/ok%20fine/ok%20fine/MenuViewController.swift"
+                  timestampString = "489481741.679538"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "392">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -219,6 +251,38 @@
             endingLineNumber = "50"
             landmarkName = "viewDidAppear(_:)"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ok_fine.MenuViewController.viewDidAppear (Swift.Bool) -&gt; ()"
+                  moduleName = "ok fine"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nathan/Google%20Drive/Projects/ok-fine/ok%20fine/ok%20fine/MenuViewController.swift"
+                  timestampString = "489481741.129944"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "972">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ok_fineTests.MenuViewController.viewDidAppear (Swift.Bool) -&gt; ()"
+                  moduleName = "ok fineTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nathan/Google%20Drive/Projects/ok-fine/ok%20fine/ok%20fine/MenuViewController.swift"
+                  timestampString = "489481741.679857"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "972">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
