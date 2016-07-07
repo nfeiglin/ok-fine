@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		D812E3F61D2CA9EE00BA364F /* RulesTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D812E3F51D2CA9EE00BA364F /* RulesTracker.swift */; };
+		D829D46B1D2EBE44008B2860 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D829D46A1D2EBE44008B2860 /* FormViewController.swift */; };
+		D829D46C1D2EBE44008B2860 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D829D46A1D2EBE44008B2860 /* FormViewController.swift */; };
 		D8449FD41D294389008FB102 /* TableViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8449FD31D294389008FB102 /* TableViewBuilder.swift */; };
 		D8449FD51D294389008FB102 /* TableViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8449FD31D294389008FB102 /* TableViewBuilder.swift */; };
 		D8449FD71D294534008FB102 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8449FD61D294534008FB102 /* MenuTableViewCell.swift */; };
@@ -18,6 +20,7 @@
 		D882EF4E1D296D370093429F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D882EF4C1D296D370093429F /* Main.storyboard */; };
 		D88CA21F1D252EBF006333F8 /* Templater.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88CA21E1D252EBF006333F8 /* Templater.swift */; };
 		D88CA2201D252EBF006333F8 /* Templater.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88CA21E1D252EBF006333F8 /* Templater.swift */; };
+		D89B6A4D1D2EB7C200A72892 /* RulesTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D812E3F51D2CA9EE00BA364F /* RulesTracker.swift */; };
 		D8D830101D241684005AEE33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D8300F1D241684005AEE33 /* AppDelegate.swift */; };
 		D8D830121D241684005AEE33 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D830111D241684005AEE33 /* ViewController.swift */; };
 		D8D830171D241684005AEE33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8D830161D241684005AEE33 /* Assets.xcassets */; };
@@ -48,6 +51,7 @@
 
 /* Begin PBXFileReference section */
 		D812E3F51D2CA9EE00BA364F /* RulesTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RulesTracker.swift; sourceTree = "<group>"; };
+		D829D46A1D2EBE44008B2860 /* FormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
 		D8449FD31D294389008FB102 /* TableViewBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewBuilder.swift; path = ../TableViewBuilder.swift; sourceTree = "<group>"; };
 		D8449FD61D294534008FB102 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		D8449FD91D2968AA008FB102 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +123,7 @@
 				D8D830111D241684005AEE33 /* ViewController.swift */,
 				D8449FD31D294389008FB102 /* TableViewBuilder.swift */,
 				D8449FD91D2968AA008FB102 /* MenuViewController.swift */,
+				D829D46A1D2EBE44008B2860 /* FormViewController.swift */,
 				D8449FD61D294534008FB102 /* MenuTableViewCell.swift */,
 				D8D830401D2424D4005AEE33 /* JsonReader.swift */,
 				D812E3F51D2CA9EE00BA364F /* RulesTracker.swift */,
@@ -277,6 +282,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D829D46B1D2EBE44008B2860 /* FormViewController.swift in Sources */,
 				D88CA21F1D252EBF006333F8 /* Templater.swift in Sources */,
 				D8D830121D241684005AEE33 /* ViewController.swift in Sources */,
 				D8449FD71D294534008FB102 /* MenuTableViewCell.swift in Sources */,
@@ -298,6 +304,8 @@
 				D88CA2201D252EBF006333F8 /* Templater.swift in Sources */,
 				D8449FD51D294389008FB102 /* TableViewBuilder.swift in Sources */,
 				D8449FD81D294534008FB102 /* MenuTableViewCell.swift in Sources */,
+				D829D46C1D2EBE44008B2860 /* FormViewController.swift in Sources */,
+				D89B6A4D1D2EB7C200A72892 /* RulesTracker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
