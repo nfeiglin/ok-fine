@@ -18,12 +18,19 @@ protocol TrackerProtocol {
 struct RulesTracker {
     
     class Tracker:TrackerProtocol {
+        
+        let debug = true
+        
         static let sharedTracker = Tracker()
         static var triggeredEvents:[TrackerType] = []
         
         
         func pushEvent(event: TrackerType) {
             Tracker.triggeredEvents.append(event)
+            
+            if self.debug {
+                debugPrint(event)
+            }
         }
         
         func fireEvent(event: TrackerType) {
@@ -40,8 +47,9 @@ struct RulesTracker {
         func getEvent(eventIndex:Int) -> TrackerType {
             return Tracker.triggeredEvents[eventIndex]
         }
-        
+
     }
+    
 
 }
 
@@ -75,6 +83,33 @@ struct RulesTrackerType:TrackerType {
     
     func getEventPayload() -> Dictionary<String, AnyObject> {
         return self.eventPayload
+    }
+    
+}
+
+
+class TrackerHelper {
+    
+    class func trackMenuEvent(selectedObject:Dictionary<String, AnyObject>, callingInstance: AnyObject? = nil) {
+        
+        var eventName = "event.no.name"
+        
+        if (selectedObject.indexForKey("meta") != nil) {
+            let meta = selectedObject["meta"]!
+            if (meta.objectForKey("option_uid") != nil) {
+                eventName = meta["option_uid"]! as! String
+            }
+        }
+        
+        let instance = callingInstance ?? self
+        
+        let trackerPayload:Dictionary<String, AnyObject> = [
+            "origin": "function: \(#function), line: \(#line) -- of \(String(instance))",
+            "object": selectedObject
+        ]
+        
+        RulesTracker.Tracker.sharedTracker.pushEvent(RulesTrackerType(eventName: eventName, date: NSDate(), payload: trackerPayload))
+        
     }
     
 }

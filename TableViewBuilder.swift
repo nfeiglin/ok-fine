@@ -10,7 +10,8 @@ import UIKit
 
 
 class TableViewBuilder: UITableViewController {
-
+    
+    
     var tableViewData:Array<Dictionary<String, AnyObject>>?
     var hasChildren:Bool = false
     var firstObject:Dictionary<String, AnyObject>?
@@ -67,6 +68,8 @@ class TableViewBuilder: UITableViewController {
         if(hasChildren) {
             self.childrenObjects = self.firstObject!["children"] as? Array<Dictionary<String, AnyObject>>
             self.title = self.firstObject!["title"] as! String /* TODO: Handle for no title case */
+          
+            TrackerHelper.trackMenuEvent(self.firstObject!, callingInstance: (self))
         }
         
     }
@@ -145,6 +148,8 @@ class TableViewBuilder: UITableViewController {
         } else {
             selectedObject = self.tableViewData![indexPath.row]
         }
+
+        TrackerHelper.trackMenuEvent(selectedObject, callingInstance: self)
         
         self.selectionCallback!(tableView: tableView, indexPath: indexPath, selectedObject: selectedObject, doesHaveChildren: self.hasChildren)
     }
