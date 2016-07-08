@@ -36,6 +36,13 @@ class TableViewBuilder: UITableViewController {
                 detailMenuViewController.title = selectedObject["title"] as! String
 				self.navigationController?.pushViewController(detailMenuViewController, animated: true)
 			}
+            
+            else {
+                let form = FormViewController()
+                //TODO: Pass in data for form
+                
+                self.navigationController?.pushViewController(form, animated: true)
+            }
 		}
 		
         // Uncomment the following line to preserve selection between presentations

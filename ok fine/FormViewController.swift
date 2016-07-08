@@ -8,12 +8,50 @@
 
 import UIKit
 
+enum FormItemTypes {
+    case Textfield
+    case NumberInput
+    case Datepicker
+    case Select
+}
+
+struct FormItem {
+    var itemType:FormItemTypes
+    var helpText: String?
+    var formItemIdentifier: String?
+    
+    var value: AnyObject?
+    
+    init(itemType:FormItemTypes, identifier: String, helpText:String? = nil) {
+        self.itemType = itemType
+        self.formItemIdentifier = identifier
+        
+        if let helperText = helpText {
+            self.helpText = helperText
+        }
+        
+    }
+    
+    mutating func setValue(theValue:AnyObject) {
+        value = theValue
+    }
+    
+}
+
 class FormViewController: UIViewController {
 
+    var formUid:String?
+    var formItems:Dictionary<String, Array<FormItem>>?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        print("==== Form View Appeared ===")
     }
 
     override func didReceiveMemoryWarning() {
