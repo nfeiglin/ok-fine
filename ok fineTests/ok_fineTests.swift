@@ -100,6 +100,25 @@ class Ok_fineTests: XCTestCase {
         XCTAssertEqual(tracker.getEvent(1).getEventName(), "test.test.two")
     }
 
+    func testFormHelperItemiseFunction(){
+        dataDict = JsonReader.readJson("data")
+        
+        let triggeredEventTestName = "nsw.bay.signs.contradictory"
+        
+        let attributeDescriptions:Dictionary<String, Dictionary<String,String>> = dataDict["input-descriptions"]! as! Dictionary<String, Dictionary<String, String>>
+        
+        //let allInputAttributes:Dictionary<String, Dictionary<String, String>> = dataDict["input-attributes"]! as! Dictionary<String, Dictionary<String, String>>
+        
+        
+        let allRequiredInputs: Dictionary<String, Array<String>> = dataDict["required-input"]! as! Dictionary<String, Array<String>>
+        
+        let requiredInputs:[String] = allRequiredInputs[triggeredEventTestName]!
+    
+        let itemised = FormHelper.itemise(attributeDescriptions, requiredInput: requiredInputs)
+        debugPrint(itemised)
+        
+        XCTAssertEqual(itemised.first?.formItemIdentifier, "name")
+    }
     
     /*
     func testExample() {

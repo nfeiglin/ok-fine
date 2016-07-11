@@ -12,7 +12,10 @@ protocol TrackerProtocol {
     func pushEvent(event: TrackerType)
     func popEvent()
     
-    func getEvent(eventIndex:Int) ->TrackerType
+    func getEvent(eventIndex:Int) -> TrackerType
+    
+    func getFirst() -> TrackerType?
+    func getLast() -> TrackerType?
 }
 
 struct RulesTracker {
@@ -47,6 +50,15 @@ struct RulesTracker {
         func getEvent(eventIndex:Int) -> TrackerType {
             return Tracker.triggeredEvents[eventIndex]
         }
+        
+        func getLast() -> TrackerType? {
+            return Tracker.triggeredEvents.last
+        }
+        
+        func getFirst() -> TrackerType? {
+            return Tracker.triggeredEvents.first
+        }
+        
 
     }
     

@@ -38,8 +38,39 @@ class TableViewBuilder: UITableViewController {
 			}
             
             else {
+               //Do prep, and present form to collect input
+                
+                let dataDict:NSDictionary = JsonReader.readJson("data")
+                
+                let triggeredEventTestName = RulesTracker.Tracker.sharedTracker.getLast()!.getEventName()
+                
+                debugPrint(dataDict["input-attributes"])
+                
+                let attributeDescriptions = dataDict["input-attributes"] as! Dictionary<String, Dictionary<String, AnyObject>>
+                /* TODO: Fix this
+                    getting really weird behaviour when trying to read this from json
+                */
+                
+                
+                debugPrint(dataDict["required-input"]!)
+                
+                //let allRequiredInputs: Dictionary<String, Array<String>> = dataDict["required-input"]! as! Dictionary<String, Array<String>>
+                
+                let allRequiredInputs:NSDictionary = dataDict["required-input"] as! NSDictionary
+                
+                debugPrint(allRequiredInputs)
+                
+                let requiredInputs:[String] = allRequiredInputs[triggeredEventTestName] as! [String]
+                
+                //let reqInputsSwiftArray:[String] = requiredInputs as! [String]
+                
+                
+                let itemised:[FormItem] = FormHelper.itemise(attributeDescriptions, requiredInput: requiredInputs)
+                
                 let form = FormViewController()
-                //TODO: Pass in data for form
+
+                form.setFormFields(itemised)
+                form.setDescriptions(attributeDescriptions)
                 
                 self.navigationController?.pushViewController(form, animated: true)
             }

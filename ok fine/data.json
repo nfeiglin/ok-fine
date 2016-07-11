@@ -36,7 +36,7 @@
     "input-attributes":{
         "name":{
             "type":"text",
-            "help-text":"Name (as to appear on the letter"
+            "help-text":"Name (as to appear on the letter)"
         },
         "infring.num":{
             "type":"number",
